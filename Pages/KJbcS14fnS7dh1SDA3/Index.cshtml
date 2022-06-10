@@ -1,0 +1,75 @@
+﻿@page
+@model Talamus_Veronica.Pages.KJbcS14fnS7dh1SDA3.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PartOfStory[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartOfStory[0].Title)
+            </th>
+            <th>
+
+                @Html.DisplayNameFor(model => model.PartOfStory[0].Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartOfStory[0].SubsequentPartsIds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartOfStory[0].SetSubsequent)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PartOfStory)
+        {
+            if (!item.SetSubsequent)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @if (item.Content.Length >= 50)
+                        {
+                            @Html.Raw(item.Content.Substring(0,50)+"...")
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.Content)
+                        }
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubsequentPartsIds)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SetSubsequent)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talamus_Veronica", "Talamus_Veronica.csproj", "{89687FAD-20B0-4DBC-A4F7-D0CB482DFE22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89687FAD-20B0-4DBC-A4F7-D0CB482DFE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89687FAD-20B0-4DBC-A4F7-D0CB482DFE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89687FAD-20B0-4DBC-A4F7-D0CB482DFE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89687FAD-20B0-4DBC-A4F7-D0CB482DFE22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0694B18F-7C86-4B92-9BD6-BF4098C71C4E}
+	EndGlobalSection
+EndGlobal

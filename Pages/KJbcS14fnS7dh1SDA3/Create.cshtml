@@ -1,0 +1,47 @@
+﻿@page
+@model Talamus_Veronica.Pages.KJbcS14fnS7dh1SDA3.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>PartOfStory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PartOfStory.Title" class="control-label"></label>
+                <input asp-for="PartOfStory.Title" class="form-control" />
+                <span asp-validation-for="PartOfStory.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartOfStory.Content" class="control-label"></label>
+                <input asp-for="PartOfStory.Content" class="form-control" />
+                <span asp-validation-for="PartOfStory.Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartOfStory.SubsequentPartsIds" class="control-label"></label>
+                <input asp-for="PartOfStory.SubsequentPartsIds" class="form-control" />
+                <span asp-validation-for="PartOfStory.SubsequentPartsIds" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="PartOfStory.SetSubsequent" /> @Html.DisplayNameFor(model => model.PartOfStory.SetSubsequent)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
